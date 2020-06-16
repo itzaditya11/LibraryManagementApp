@@ -20,3 +20,4 @@ Things to change in settings.py
 contact us will not work because you have to provide your gmail id and password
 change that in settings.py
 =======================================================================
+# newsapp
