@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Sumit</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Assistant&family=Oxygen&family=Raleway&display=swap">
+
+	<style type="text/css">
+		.signup-form form a:hover {
+			text-decoration: underline;
+		}
+
+		.hero-body {
+			margin-top: 5%;
+		}
+		.title {
+			font-family: 'Raleway', sans-serif;
+			font-weight: bold;
+			font-size: 3rem;
+			text-align: center;
+		}
+
+		h2 {
+			font-family: 'Oxygen', sans-serif;
+			font-size: 2rem;
+		}
+
+		form {
+			font-family: 'Assistant', sans-serif;
+		}
+
+		#go {
+			font-family: 'Oxygen', sans-serif;
+			font-size: 1rem;
+
+		}
+	</style>
+
+</head>
+
+<body style="background-color:#b6bde7;">
+	{% include "navbaradmin.html" %}
+	<section class="hero is-primary is-bold is-fullheight-with-navbar">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">
+					ISSUE BOOK TO STUDENT !
+				</h1>
+			</div>
+		</div>
+	</section>
+
+	<section class="hero is-light is-bold is-fullheight-with-navbar">
+		<div class="hero-body">
+			<div class="container d-flex justify-content-center">
+				<form method="post" class="form-horizontal">
+					{% csrf_token %}
+					<div>
+						<h2>ISSUE BOOK TO STUDENT</h2>
+					</div>
+					{% for field in form %}
+					<div class="form-group">
+						<label class="control-label col-xs-4">{{ field.label_tag }}</label>
+						<div class="col-xs-8">
+							{{ field }}
+						</div>
+					</div>
+					{% endfor %}
+					<div class="form-group">
+						<div class="col-xs-8 col-xs-offset-4">
+							<button type="submit" class="btn btn-primary btn-lg">ISSUE</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="go" class="signup-form mb-3">
+			<div class="text-center">View Issued Book to Student 
+				<a href="viewissuedbook"><em>Click here</em></a></div>
+		</div>
+	
+	</section>
+	
+
+
+
+	{% include "footer.html" %}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+</body>
+
+</html>

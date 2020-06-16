@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Viewd Issued Book</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Oxygen&family=Raleway&display=swap"
+    rel="stylesheet">
+  <style media="screen">
+    .title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      font-size: 3rem;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <body>
+    {% include "navbarstudent.html" %}<br><br>
+    <section class="hero is-primary is-bold is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Book Issued To You !
+          </h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-light is-bold is-fullheight-with-navbar">
+      <div class="hero-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6" style="padding-right:0px;">
+              {% if li1%}
+              <table class="table table-bordered table-dark  table-hover">
+                <thead>
+                  <tr class="bg-light">
+                    <th>Name</th>
+                    <th>Enrollment</th>
+                    <th>Branch</th>
+                    <th>Book Name</th>
+                    <th>Book Author</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td colspan="5">
+                      <div class="links"></div>
+                    </td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  {% for t in li1 %}
+                  <tr>
+                    <td> {{t.0}}</td>
+                    <td> {{t.1}}</td>
+                    <td> {{t.2}}</td>
+                    <td> {{t.3}}</td>
+                    <td> {{t.4}}</td>
+                  </tr>
+
+                  {% endfor %}
+                </tbody>
+              </table>
+
+            </div>
+
+
+            <div class="col-lg-6" style="padding-left:0px;">
+
+              <table class="table table-bordered table-dark  table-hover">
+                <thead>
+                  <tr class="bg-light">
+                    <th>Issue Date</th>
+                    <th>Expiry Date</th>
+                    <th>Fine</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td colspan="5">
+                      <div class="links"></div>
+                    </td>
+                  </tr>
+                </tfoot>
+                <tbody>
+                  {% for t in li2 %}
+                  <tr>
+                    <td> {{t.0}}</td>
+                    <td> {{t.1}}</td>
+                    <td> {{t.2}}</td>
+                  </tr>
+
+
+
+
+                  {% endfor %}
+                </tbody>
+              </table>
+              {%else%}
+              <h1> No book Issued to you</h1>
+              {%endif%}
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include "footer.html" %}
+  </body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Admin</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Assistant&family=Oxygen&family=Raleway&display=swap" rel="stylesheet">
+
+  <style media="screen">
+    .title{
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      font-size: 4rem;
+      text-align: center;
+    }
+    .lead{
+      font-family: 'Oxygen', sans-serif;
+      font-weight: 2rem;
+     
+    }
+    hr{
+      color: black;
+    }
+  
+
+
+  </style>
+</head>
+
+<body>
+
+  {% include "navbar.html" %}
+
+  <section class="hero is-dark is-bold is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Hello,Admin!
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-medium is-bold is-fullheight-with-navbar">
+    <div class="hero-body">
+      <div class="container">
+        <p class="lead">Welcome to Online Library Management System.</p>
+        <hr class="my-4">
+        <p class="lead">You can access various features after Login/SignUp.</p>
+        <p class="lead">
+          <a class="btn btn-primary mt-4 mr-4 btn-lg" href="adminsignup" role="button">SignUp</a>
+          <a class="btn btn-primary mt-4 btn-lg" href="adminlogin" role="button">Login</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  {% include "footer.html" %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
